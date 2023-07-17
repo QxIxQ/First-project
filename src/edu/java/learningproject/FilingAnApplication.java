@@ -1,3 +1,5 @@
+package edu.java.learningproject;
+
 public class FilingAnApplication {
     public static void main(String[] args) {
     filingApplication();
