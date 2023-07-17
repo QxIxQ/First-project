@@ -7,19 +7,11 @@ public class RegistrationStatement {
         po.wFirstName = "Elena";
         po.wLastName = "Ivanova";
 
-        po.hFirstName = "Sergey";
-        po.hLastName = "Petrov";
-        po.wFirstName = "Anna";
-        po.wLastName = "Petrova";
-
         long ans = registrationStatementUser(po);
         System.out.println(ans);
-        long ans1 = registrationStatementUser(po);
-        System.out.println(ans1);
     }
     static long registrationStatementUser(PersonOrder personOrder) {
-        long answer;
-        answer = 20;
+        long answer = 20;
         System.out.println("registrationStatementUser" + personOrder.wLastName);
 
         return answer;
