@@ -2,13 +2,17 @@ package edu.java.learningproject.domain;
 
 import java.time.LocalDate;
 
-public class Person
+public abstract class Person
 {
     protected String surName;
     protected String givenName;
     private String  patronymic;
     private LocalDate dataOfBirth;
     private String Address;
+
+    public Person() {
+        System.out.println("Person is created!");
+    }
 
     public String getPersonString() {
         return surName + " " + givenName;
@@ -17,6 +21,7 @@ public class Person
     public String getSurName() {
         return surName;
     }
+
     public void setSurName(String surName) {
         this.surName = surName;
     }

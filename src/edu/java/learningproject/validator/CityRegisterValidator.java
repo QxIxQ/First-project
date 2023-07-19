@@ -9,7 +9,7 @@ public class CityRegisterValidator {
     private String login;
     String password;
 
-    public AnswerCityRegister checkArhiveRegistration(PersonOrder po) {
+    public AnswerCityRegister checkCityRegistration(PersonOrder po) {
         System.out.println("Check register is running:" + hostName + "," + login + "," + password);
         AnswerCityRegister ans = new AnswerCityRegister();
         ans.success = false;

@@ -1,11 +1,12 @@
 package edu.java.learningproject;
 
-import edu.java.learningproject.domain.other.Adult;
+import edu.java.learningproject.domain.Adult;
+import edu.java.learningproject.domain.Person;
 import edu.java.learningproject.domain.PersonOrder;
 
 public class RegistrationStatement {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         buildPersonOrder();
 
 //       PersonOrder po = new PersonOrder();
@@ -19,16 +20,18 @@ public class RegistrationStatement {
         return answer;
     }
 
-    static PersonOrder buildPersonOrder(){
+    public static PersonOrder buildPersonOrder(){
         PersonOrder po = new PersonOrder();
-        Adult husband = new Adult();
-        husband.setGivenName("Alexandr");
-        husband.setSurName("Ivanov");
-        husband.setPassportNumber("123456789");
-        po.setHusband(husband);
 
-        String ans = husband.getPersonString();
-        System.out.println(ans);
+        Adult husband = new Adult();
+
+//        husband.setGivenName("Alexandr");
+//        husband.setSurName("Ivanov");
+//        husband.setPassportNumber("123456789");
+//        po.setHusband(husband);
+
+//          String ans = husband.getPersonString();
+//          System.out.println(ans);
 
         return po;
     }

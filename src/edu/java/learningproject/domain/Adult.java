@@ -1,6 +1,4 @@
-package edu.java.learningproject.domain.other;
-
-import edu.java.learningproject.domain.Person;
+package edu.java.learningproject.domain;
 
 import java.time.LocalDate;
 
