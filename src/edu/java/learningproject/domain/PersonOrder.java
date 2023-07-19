@@ -1,5 +1,7 @@
 package edu.java.learningproject.domain;
 
+import edu.java.learningproject.domain.other.Adult;
+
 public class PersonOrder {
    private long personOrderId; //индентификатор
    private Adult husband;
