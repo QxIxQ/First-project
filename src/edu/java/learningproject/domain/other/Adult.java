@@ -1,14 +1,21 @@
-package edu.java.learningproject.domain;
+package edu.java.learningproject.domain.other;
+
+import edu.java.learningproject.domain.Person;
 
 import java.time.LocalDate;
 
-public class Adult extends Person {
+public class Adult extends Person
+{
     private String passportSeria;
     private String passportNumber;
     private LocalDate issueData;
     private String issueDepartment;
     private String education;
     private String numberId;
+
+    public String getPersonString() {
+        return surName + " " + givenName + ":" + passportNumber;
+    }
 
     public String getPassportSeria() {
         return passportSeria;
