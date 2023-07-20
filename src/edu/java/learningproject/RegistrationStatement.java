@@ -7,8 +7,6 @@ import edu.java.learningproject.domain.PersonOrder;
 public class RegistrationStatement {
 
     public static void main(String[] args) {
-        buildPersonOrder();
-
 //       PersonOrder po = new PersonOrder();
 //        long ans = registrationStatementUser(po);
 //        System.out.println(ans);
@@ -19,19 +17,9 @@ public class RegistrationStatement {
 
         return answer;
     }
-
-    public static PersonOrder buildPersonOrder(){
+    public static PersonOrder buildPersonOrder(long id){
         PersonOrder po = new PersonOrder();
-
-        Adult husband = new Adult();
-
-//        husband.setGivenName("Alexandr");
-//        husband.setSurName("Ivanov");
-//        husband.setPassportNumber("123456789");
-//        po.setHusband(husband);
-
-//          String ans = husband.getPersonString();
-//          System.out.println(ans);
+        po.setPersonOrderId(id);
 
         return po;
     }
