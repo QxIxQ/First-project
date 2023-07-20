@@ -45,7 +45,6 @@ public class PersonOrderValidator
         for(int c = 0; c < poArray.length; c++) {
             poArray[c] = RegistrationStatement.buildPersonOrder(c);
         }
-
         return poArray;
     }
 

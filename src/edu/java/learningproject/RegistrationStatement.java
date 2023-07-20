@@ -21,6 +21,7 @@ public class RegistrationStatement {
         PersonOrder po = new PersonOrder();
         po.setPersonOrderId(id);
 
+        Adult husband = new Adult("Степанов","Артемий","Сигизмундович",null);
         return po;
     }
 }

@@ -11,8 +11,11 @@ public class Adult extends Person
     private String education;
     private String numberId;
 
-    public String getPersonString() {
-        return surName + " " + givenName + ":" + passportNumber;
+    public Adult() {
+    }
+
+    public Adult(String surName, String givenName, String patronymic, LocalDate dataOfBirth) {  // create constructor matching Person (super)
+        super(surName, givenName, patronymic, dataOfBirth);
     }
 
     public String getPassportSeria() {
