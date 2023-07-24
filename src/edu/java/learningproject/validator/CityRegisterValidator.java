@@ -1,7 +1,9 @@
 package edu.java.learningproject.validator;
 
 import edu.java.learningproject.domain.AnswerCityRegister;
+import edu.java.learningproject.domain.CityRegisterCheckerResponse;
 import edu.java.learningproject.domain.PersonOrder;
+import edu.java.learningproject.exception.CityRegisterException;
 
 public class CityRegisterValidator {
     public String hostName;
@@ -9,10 +11,21 @@ public class CityRegisterValidator {
     private String login;
     String password;
 
+    private CityRegisterChecker personChecker;
+
+    public CityRegisterValidator() {
+        personChecker = new FakeCityRegisterChecker();
+    }
     public AnswerCityRegister checkCityRegistration(PersonOrder po) {
-        System.out.println("Check register is running:" + hostName + "," + login + "," + password);
+        try {
+            CityRegisterCheckerResponse husband_ans = personChecker.checkPerson(po.getHusband());
+            CityRegisterCheckerResponse wife_ans = personChecker.checkPerson(po.getWife());
+            CityRegisterCheckerResponse child_ans = personChecker.checkPerson(po.getChild());
+        } catch (CityRegisterException ex) {
+            ex.printStackTrace();
+        }
+
         AnswerCityRegister ans = new AnswerCityRegister();
-        ans.success = false;
         return ans;
     }
 }
