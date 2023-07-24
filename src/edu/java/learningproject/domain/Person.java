@@ -4,18 +4,20 @@ import java.time.LocalDate;
 
 public abstract class Person
 {
-    protected String surName;
-    protected String givenName;
+    private String surName;
+    private String givenName;
     private String  patronymic;
     private LocalDate dataOfBirth;
     private String Address;
 
-    public Person() {
-        System.out.println("Person is created!");
+    public Person(){
     }
 
-    public String getPersonString() {
-        return surName + " " + givenName;
+    public Person(String surName, String givenName, String patronymic, LocalDate dataOfBirth) {  //create construct with parameters
+        this.surName = surName;
+        this.givenName = givenName;
+        this.patronymic = patronymic;
+        this.dataOfBirth = dataOfBirth;
     }
 
     public String getSurName() {

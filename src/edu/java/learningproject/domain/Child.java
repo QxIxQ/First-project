@@ -7,6 +7,10 @@ public class Child extends Person {
     public LocalDate issueData;
     public String issueDepartment;
 
+    public Child(String surName, String givenName, String patronymic, LocalDate dataOfBirth) {    // create constructor matching Person (super)
+        super(surName, givenName, patronymic, dataOfBirth);
+    }
+
     public String getCertificateNumber() {
         return certificateNumber;
     }

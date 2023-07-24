@@ -38,14 +38,13 @@ public class PersonOrderValidator
 //            checkOneOrder(po);
 //        }
     }
-
+//
     public PersonOrder[] readPersonOrders() {
         PersonOrder[] poArray = new PersonOrder[3];                // declaration array
 
         for(int c = 0; c < poArray.length; c++) {
             poArray[c] = RegistrationStatement.buildPersonOrder(c);
         }
-
         return poArray;
     }
 
